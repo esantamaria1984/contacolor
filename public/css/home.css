@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #ecf0f1;
+}
+
+/*------------------------------CABECERA---------------------------------*/
+
+#head{
+    height: 9vh;
+    background-color: #72C7E7;
+    text-align: center;
+    border-bottom: 1.5px solid rgb(0, 74, 159);
+}
+
+#logo{
+    width: 13%;
+    margin-top: 0.5vh;
+    height: auto;
+}
+
+/*------------------------------CUERPO---------------------------------*/
+
+.container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-left: 10%;
+    margin-top: 13vh;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    width: 100%;
+}
+
+.box{
+    width: 50%;
+    height: 30vh;
+    background-color: white;
+    border: 1.5px solid rgb(0, 74, 159);
+}
