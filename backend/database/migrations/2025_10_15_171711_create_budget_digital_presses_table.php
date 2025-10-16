@@ -14,24 +14,24 @@ return new class extends Migration
         Schema::create('budget_digital_presses', function (Blueprint $table) {
             $table->id();
             $table->foreignId('idClient')->constrained('clients')->onDelete('cascade');
-            $table->integer('width');
-            $table->integer('height');
+            $table->decimal('width');
+            $table->decimal('height');
             for ($i = 1; $i <= 8; $i++) { 
                 $table->integer("amount{$i}")->nullable();
             }
             $table->string('nameDigitalPress');
-            $table->integer('costPerUnitCopy');
+            $table->decimal('costPerUnitCopy');
             $table->string('nameMaterial');
-            $table->integer('widthMaterial');
-            $table->integer('heightMaterial');
-            $table->integer('costPerUnitMaterial');
-            $table->integer('minuteCostGraphicDesign');
+            $table->decimal('widthMaterial');
+            $table->decimal('heightMaterial');
+            $table->decimal('costPerUnitMaterial');
+            $table->decimal('minuteCostGraphicDesign');
             $table->integer('timeInMinutesGraphicDesign');
             for ($i = 1; $i <= 5; $i++) { 
-                $table->integer("manipulateName{$i}")->nullable();
+                $table->string("manipulateName{$i}")->nullable();
                 $table->string("manipulateType{$i}")->nullable();
-                $table->integer("manipulateUnitMinuteCost{$i}")->nullable();
-                $table->integer("manipulateCost{$i}")->nullable();
+                $table->decimal("manipulateUnitMinuteCost{$i}")->nullable();
+                $table->decimal("manipulateCost{$i}")->nullable();
             }
             $table->integer('comercialMargin');
             $table->timestamps();

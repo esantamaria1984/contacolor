@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('manipulate_cost_per_unit_materials', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('unitCost');
+            $table->decimal('unitCost');
             $table->timestamps();
         });
     }

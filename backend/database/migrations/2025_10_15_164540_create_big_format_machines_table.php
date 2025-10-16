@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('big_format_machines', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('inkCostCm2');
+            $table->decimal('inkCostCC');
             $table->timestamps();
         });
     }

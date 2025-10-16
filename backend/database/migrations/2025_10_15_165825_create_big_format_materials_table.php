@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('big_format_materials', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('costPerM2to1m');
-            $table->integer('costPerM2to10m');
-            $table->integer('costPerM2to20m');
-            $table->integer('costPerM2to30m');
-            $table->integer('costPerM2to40m');
-            $table->integer('costPerM2to50m');
-            $table->integer('costPerM2to100m');
+            $table->decimal('costPerM2to1m');
+            $table->decimal('costPerM2to10m');
+            $table->decimal('costPerM2to20m');
+            $table->decimal('costPerM2to30m');
+            $table->decimal('costPerM2to40m');
+            $table->decimal('costPerM2to50m');
+            $table->decimal('costPerM2to100m');
             $table->timestamps();
         });
     }

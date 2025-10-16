@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('cost_graphic_designs', function (Blueprint $table) {
             $table->id();
-            $table->integer('minuteCost');
+            $table->decimal('minuteCost');
             $table->timestamps();
         });
     }

@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('manipulate_cost_per_time_materials', function (Blueprint $table) {
+        Schema::create('digital_press_machine_prices', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->decimal('minuteCost');
+            $table->foreignId('machineId')->constrained('digital_press_machines')->onDelete('cascade');
+            $table->string('color');
+            $table->integer('from');
+            $table->integer(('to'));
+            $table->decimal('unitPerCopy');
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('manipulate_materials_cost_per_time');
+        Schema::dropIfExists('digital_press_machine_prices');
     }
 };

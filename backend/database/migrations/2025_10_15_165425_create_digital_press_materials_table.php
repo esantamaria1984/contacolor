@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('digital_press_materials', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('width');
-            $table->integer('height');
-            $table->integer('costPerUnit');
+            $table->decimal('width');
+            $table->decimal('height');
+            $table->decimal('costPerUnit');
             $table->timestamps();
         });
     }

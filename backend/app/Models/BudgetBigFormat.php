@@ -22,7 +22,7 @@ class BudgetBigFormat extends Model
         'amount7',
         'amount8',
         'namePlotter',
-        'inkCostCm2',
+        'inkCostCC',
         'nameMaterial',
         'amountM2Material1',
         'amountM2Material2',

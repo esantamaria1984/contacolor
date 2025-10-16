@@ -14,19 +14,19 @@ return new class extends Migration
         Schema::create('budget_big_formats', function (Blueprint $table) {
             $table->id();
             $table->foreignId('idClient')->constrained('clients')->onDelete('cascade');
-            $table->integer('width');
-            $table->integer('height');
+            $table->decimal('width');
+            $table->decimal('height');
             for ($i = 1; $i <= 8; $i++) { 
                 $table->integer("amount{$i}")->nullable();
             }
             $table->string('namePlotter');
-            $table->integer('inkCostCm2');
+            $table->decimal('inkCostCC');
             $table->string('nameMaterial');
             for ($i = 1; $i <= 8; $i++) { 
-                $table->integer("amountM2Material{$i}")->nullable();
+                $table->decimal("amountM2Material{$i}")->nullable();
             }
-            $table->integer('costPerM2');
-            $table->integer('minuteCostGraphicDesign');
+            $table->decimal('costPerM2');
+            $table->decimal('minuteCostGraphicDesign');
             $table->integer('timeInMinutesGraphicDesign');
             $table->timestamps();
         });
